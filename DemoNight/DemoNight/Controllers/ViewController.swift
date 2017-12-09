@@ -28,20 +28,14 @@ class ViewController: UIViewController {
       locationManager.allowsBackgroundLocationUpdates = true
       locationManager.pausesLocationUpdatesAutomatically = false
       locationManager.startUpdatingLocation()
-
-    let visit = Visit() // TODO: Move to user check-in flow
-
-    user.visits.append(visit) 
-  
-    try! realm.write {
-      realm.add(user) // TODO: Move to user signup flow
     }
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-}                                                                    
+
+}
 
 // MARK: - CLLocationManagerDelegate
 extension ViewController: CLLocationManagerDelegate {
@@ -53,9 +47,6 @@ extension ViewController: CLLocationManagerDelegate {
     position.longitude = locValue.longitude
 
     print("\(position)")
-    try! realm.write {
-      user.visits.last?.positions.append(position)
-    }
   }
 }
 

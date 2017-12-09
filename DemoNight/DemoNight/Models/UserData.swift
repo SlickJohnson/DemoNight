@@ -4,7 +4,7 @@ import CoreLocation
 
 /// Holds the user's phonenumber and visit data (created at signup).
 class User: Object {
-  var phoneNumber: String
+  var phoneNumber: String = ""
   var visits = List<Visit>()
 }
 
