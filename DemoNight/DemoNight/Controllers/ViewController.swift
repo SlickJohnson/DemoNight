@@ -11,9 +11,10 @@ import CoreLocation
 import RealmSwift
 
 class ViewController: UIViewController {
+  /// Handles location tracking
   let locationManager = CLLocationManager()
+  /// Handles realm objects
   var realm = try! Realm()
-  let user = User()
   
   override func viewDidLoad() {
     super.viewDidLoad()
