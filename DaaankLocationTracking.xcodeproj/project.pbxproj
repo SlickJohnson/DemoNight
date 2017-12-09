@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		3D7D28921FDBE111007FD84F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D28911FDBE111007FD84F /* AppDelegate.swift */; };
-		3D7D28941FDBE111007FD84F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D28931FDBE111007FD84F /* ViewController.swift */; };
 		3D7D28971FDBE111007FD84F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D28951FDBE111007FD84F /* Main.storyboard */; };
 		3D7D28991FDBE111007FD84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D28981FDBE111007FD84F /* Assets.xcassets */; };
 		3D7D289C1FDBE111007FD84F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D289A1FDBE111007FD84F /* LaunchScreen.storyboard */; };
+		3D7D28A41FDBE2E9007FD84F /* SpacedFontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D28A31FDBE2E9007FD84F /* SpacedFontLabel.swift */; };
+		3D7D28AB1FDBE9D2007FD84F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D28A91FDBE9D2007FD84F /* ViewController.swift */; };
+		3D7D28AC1FDBE9D2007FD84F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D28AA1FDBE9D2007FD84F /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D7D288E1FDBE111007FD84F /* DaaankLocationTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaaankLocationTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7D28911FDBE111007FD84F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D7D28931FDBE111007FD84F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D7D28961FDBE111007FD84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D7D28981FDBE111007FD84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D7D289B1FDBE111007FD84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D7D289D1FDBE111007FD84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D7D28A31FDBE2E9007FD84F /* SpacedFontLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacedFontLabel.swift; sourceTree = "<group>"; };
+		3D7D28A91FDBE9D2007FD84F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D7D28AA1FDBE9D2007FD84F /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		3D7D28901FDBE111007FD84F /* DaaankLocationTracking */ = {
 			isa = PBXGroup;
 			children = (
+				3D7D28A81FDBE320007FD84F /* Models */,
+				3D7D28A61FDBE30F007FD84F /* ViewControllers */,
+				3D7D28A51FDBE2F8007FD84F /* Views */,
 				3D7D28911FDBE111007FD84F /* AppDelegate.swift */,
-				3D7D28931FDBE111007FD84F /* ViewController.swift */,
 				3D7D28951FDBE111007FD84F /* Main.storyboard */,
 				3D7D28981FDBE111007FD84F /* Assets.xcassets */,
 				3D7D289A1FDBE111007FD84F /* LaunchScreen.storyboard */,
 				3D7D289D1FDBE111007FD84F /* Info.plist */,
 			);
 			path = DaaankLocationTracking;
+			sourceTree = "<group>";
+		};
+		3D7D28A51FDBE2F8007FD84F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D7D28A31FDBE2E9007FD84F /* SpacedFontLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D7D28A61FDBE30F007FD84F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D7D28A91FDBE9D2007FD84F /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3D7D28A81FDBE320007FD84F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D7D28AA1FDBE9D2007FD84F /* UserData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D7D28941FDBE111007FD84F /* ViewController.swift in Sources */,
+				3D7D28AB1FDBE9D2007FD84F /* ViewController.swift in Sources */,
+				3D7D28A41FDBE2E9007FD84F /* SpacedFontLabel.swift in Sources */,
+				3D7D28AC1FDBE9D2007FD84F /* UserData.swift in Sources */,
 				3D7D28921FDBE111007FD84F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +310,7 @@
 				DEVELOPMENT_TEAM = RFQY6T2L4D;
 				INFOPLIST_FILE = DaaankLocationTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daaank.DaaankLocationTracking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daaank.LocationTracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,7 +325,7 @@
 				DEVELOPMENT_TEAM = RFQY6T2L4D;
 				INFOPLIST_FILE = DaaankLocationTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.daaank.DaaankLocationTracking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daaank.LocationTracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
