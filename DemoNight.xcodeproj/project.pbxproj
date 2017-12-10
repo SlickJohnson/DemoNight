@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		23224B0004482AE1AAE4A7D2 /* Pods_DemoNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6978E8A19EFCE4F5534844 /* Pods_DemoNight.framework */; };
 		3DA273CB1FDC922F00FCD309 /* Object+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA273CA1FDC922F00FCD309 /* Object+Extensions.swift */; };
+		3DA273CD1FDCB90700FCD309 /* SpacedFontTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA273CC1FDCB90700FCD309 /* SpacedFontTextField.swift */; };
+		3DA273D01FDCBE1F00FCD309 /* SFMono-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3DA273CE1FDCBDAC00FCD309 /* SFMono-Bold.otf */; };
 		3DBB87AE1FDC144E00B1773D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87AD1FDC144E00B1773D /* UserData.swift */; };
 		3DBB87C31FDC148500B1773D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87AF1FDC148400B1773D /* GameViewController.swift */; };
 		3DBB87C41FDC148500B1773D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87B11FDC148400B1773D /* LaunchScreen.storyboard */; };
 		3DBB87C51FDC148500B1773D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87B31FDC148400B1773D /* Main.storyboard */; };
 		3DBB87C61FDC148500B1773D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87B51FDC148400B1773D /* GameScene.sks */; };
-		3DBB87C71FDC148500B1773D /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87B71FDC148400B1773D /* SignupViewController.swift */; };
 		3DBB87C81FDC148500B1773D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87B81FDC148400B1773D /* ViewController.swift */; };
 		3DBB87C91FDC148500B1773D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87B91FDC148400B1773D /* Assets.xcassets */; };
 		3DBB87CA1FDC148500B1773D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87BA1FDC148400B1773D /* GameScene.swift */; };
@@ -22,6 +23,8 @@
 		3DBB87CD1FDC148500B1773D /* SpacedFontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87BF1FDC148500B1773D /* SpacedFontLabel.swift */; };
 		3DBB87CE1FDC148500B1773D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87C01FDC148500B1773D /* Actions.sks */; };
 		3DBB87CF1FDC148500B1773D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87C11FDC148500B1773D /* AppDelegate.swift */; };
+		3DF0DCDA1FDCDDB8005CE798 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0DCD91FDCDDB8005CE798 /* PhoneNumberViewController.swift */; };
+		3DF0DCDC1FDCEE13005CE798 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0DCDB1FDCEE13005CE798 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +33,13 @@
 		38CEB7CE873874ED879FB2E8 /* Pods-DaaankLocationTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaaankLocationTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaaankLocationTracking/Pods-DaaankLocationTracking.debug.xcconfig"; sourceTree = "<group>"; };
 		3D7D288E1FDBE111007FD84F /* DemoNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA273CA1FDC922F00FCD309 /* Object+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Extensions.swift"; sourceTree = "<group>"; };
+		3DA273CC1FDCB90700FCD309 /* SpacedFontTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacedFontTextField.swift; sourceTree = "<group>"; };
+		3DA273CE1FDCBDAC00FCD309 /* SFMono-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Bold.otf"; sourceTree = "<group>"; };
 		3DBB87AD1FDC144E00B1773D /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3DBB87AF1FDC148400B1773D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		3DBB87B21FDC148400B1773D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DBB87B41FDC148400B1773D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		3DBB87B51FDC148400B1773D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = DemoNight/GameScene.sks; sourceTree = "<group>"; };
-		3DBB87B71FDC148400B1773D /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		3DBB87B81FDC148400B1773D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DBB87B91FDC148400B1773D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DemoNight/Assets.xcassets; sourceTree = "<group>"; };
 		3DBB87BA1FDC148400B1773D /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = DemoNight/GameScene.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		3DBB87C01FDC148500B1773D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Actions.sks; path = DemoNight/Actions.sks; sourceTree = "<group>"; };
 		3DBB87C11FDC148500B1773D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DemoNight/AppDelegate.swift; sourceTree = "<group>"; };
 		3DBB87C21FDC148500B1773D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DF0DCD91FDCDDB8005CE798 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
+		3DF0DCDB1FDCEE13005CE798 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		97D5615D8A4DF61735E32174 /* Pods-DaaankLocationTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaaankLocationTracking.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaaankLocationTracking/Pods-DaaankLocationTracking.release.xcconfig"; sourceTree = "<group>"; };
 		B1BCBD90A165298F6FD8F09E /* Pods_DaaankLocationTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaaankLocationTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6978E8A19EFCE4F5534844 /* Pods_DemoNight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoNight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +88,7 @@
 		3D7D28901FDBE111007FD84F /* DemoNight */ = {
 			isa = PBXGroup;
 			children = (
+				3DA273CF1FDCBDB200FCD309 /* Fonts */,
 				3DBB87BE1FDC148500B1773D /* Views */,
 				3DBB87B61FDC148400B1773D /* Controllers */,
 				3DBB87AC1FDC144E00B1773D /* Models */,
@@ -102,9 +109,18 @@
 		3DA273C91FDC922200FCD309 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3DF0DCDB1FDCEE13005CE798 /* UIViewController+Extensions.swift */,
 				3DA273CA1FDC922F00FCD309 /* Object+Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3DA273CF1FDCBDB200FCD309 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3DA273CE1FDCBDAC00FCD309 /* SFMono-Bold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		3DBB87AC1FDC144E00B1773D /* Models */ = {
@@ -119,8 +135,8 @@
 		3DBB87B61FDC148400B1773D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3DF0DCD91FDCDDB8005CE798 /* PhoneNumberViewController.swift */,
 				3DBB87AF1FDC148400B1773D /* GameViewController.swift */,
-				3DBB87B71FDC148400B1773D /* SignupViewController.swift */,
 				3DBB87B81FDC148400B1773D /* ViewController.swift */,
 			);
 			name = Controllers;
@@ -131,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBB87BF1FDC148500B1773D /* SpacedFontLabel.swift */,
+				3DA273CC1FDCB90700FCD309 /* SpacedFontTextField.swift */,
 			);
 			name = Views;
 			path = DemoNight/Views;
@@ -223,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA273D01FDCBE1F00FCD309 /* SFMono-Bold.otf in Resources */,
 				3DBB87C51FDC148500B1773D /* Main.storyboard in Resources */,
 				3DBB87C61FDC148500B1773D /* GameScene.sks in Resources */,
 				3DBB87C41FDC148500B1773D /* LaunchScreen.storyboard in Resources */,
@@ -301,9 +319,11 @@
 			files = (
 				3DBB87CF1FDC148500B1773D /* AppDelegate.swift in Sources */,
 				3DBB87AE1FDC144E00B1773D /* UserData.swift in Sources */,
-				3DBB87C71FDC148500B1773D /* SignupViewController.swift in Sources */,
+				3DF0DCDA1FDCDDB8005CE798 /* PhoneNumberViewController.swift in Sources */,
 				3DBB87CA1FDC148500B1773D /* GameScene.swift in Sources */,
 				3DA273CB1FDC922F00FCD309 /* Object+Extensions.swift in Sources */,
+				3DF0DCDC1FDCEE13005CE798 /* UIViewController+Extensions.swift in Sources */,
+				3DA273CD1FDCB90700FCD309 /* SpacedFontTextField.swift in Sources */,
 				3DBB87CD1FDC148500B1773D /* SpacedFontLabel.swift in Sources */,
 				3DBB87C31FDC148500B1773D /* GameViewController.swift in Sources */,
 				3DBB87C81FDC148500B1773D /* ViewController.swift in Sources */,

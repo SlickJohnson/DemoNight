@@ -34,7 +34,6 @@ class ViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -49,4 +48,3 @@ extension ViewController: CLLocationManagerDelegate {
     print("\(position)")
   }
 }
-

@@ -10,49 +10,43 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFMono-Bold.otf">
+            <string>SFMono-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Signup View Controller-->
+        <!--Phone Number View Controller-->
         <scene sceneID="By9-hW-qZn">
             <objects>
-                <viewController id="PeS-kd-rd3" customClass="SignupViewController" customModule="DemoNight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PeS-kd-rd3" customClass="PhoneNumberViewController" customModule="DemoNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="paE-F9-Jqq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE NUMBER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf3-ux-Mu6">
-                                <rect key="frame" x="27" y="304" width="137" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ENTER PHONE #" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHF-ZC-KGC" customClass="SpacedFontTextField" customModule="DemoNight" customModuleProvider="target">
+                                <rect key="frame" x="89" y="333" width="197" height="21"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBg-62-6e0">
-                                <rect key="frame" x="67" y="343" width="249" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p65-zj-dja">
-                                <rect key="frame" x="43" y="416" width="37" height="30"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <action selector="submitNumber:" destination="PeS-kd-rd3" eventType="touchUpInside" id="dXK-b0-DAC"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.49019607843137253" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jBg-62-6e0" firstAttribute="top" secondItem="gf3-ux-Mu6" secondAttribute="bottom" constant="18" id="DGr-Uh-q0z"/>
-                            <constraint firstItem="p65-zj-dja" firstAttribute="leading" secondItem="0Jb-7A-H28" secondAttribute="leading" constant="43" id="Elw-TE-xbm"/>
-                            <constraint firstItem="0Jb-7A-H28" firstAttribute="bottom" secondItem="jBg-62-6e0" secondAttribute="bottom" constant="294" id="M8b-Au-D9U"/>
-                            <constraint firstItem="0Jb-7A-H28" firstAttribute="bottom" secondItem="p65-zj-dja" secondAttribute="bottom" constant="221" id="ZMb-JS-4MC"/>
-                            <constraint firstItem="jBg-62-6e0" firstAttribute="width" secondItem="paE-F9-Jqq" secondAttribute="width" multiplier="249/375" id="b6b-Ab-I9p"/>
-                            <constraint firstItem="gf3-ux-Mu6" firstAttribute="leading" secondItem="0Jb-7A-H28" secondAttribute="leading" constant="27" id="qoK-tE-suA"/>
-                            <constraint firstItem="0Jb-7A-H28" firstAttribute="trailing" secondItem="jBg-62-6e0" secondAttribute="trailing" constant="59" id="rg0-F7-clW"/>
+                            <constraint firstItem="wHF-ZC-KGC" firstAttribute="centerY" secondItem="0Jb-7A-H28" secondAttribute="centerY" id="M82-WH-UWd"/>
+                            <constraint firstItem="wHF-ZC-KGC" firstAttribute="height" secondItem="paE-F9-Jqq" secondAttribute="height" multiplier="21/667" id="apC-l3-PZT"/>
+                            <constraint firstItem="wHF-ZC-KGC" firstAttribute="width" secondItem="paE-F9-Jqq" secondAttribute="width" multiplier="197/375" id="duu-dz-dDf"/>
+                            <constraint firstItem="wHF-ZC-KGC" firstAttribute="centerX" secondItem="0Jb-7A-H28" secondAttribute="centerX" id="uaE-fw-lCk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Jb-7A-H28"/>
                     </view>
                     <connections>
-                        <outlet property="phoneNumberTextField" destination="jBg-62-6e0" id="DTH-DW-Z1P"/>
+                        <outlet property="phoneNumberTextField" destination="wHF-ZC-KGC" id="QiZ-jX-dJr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYP-bc-Jiu" userLabel="First Responder" sceneMemberID="firstResponder"/>

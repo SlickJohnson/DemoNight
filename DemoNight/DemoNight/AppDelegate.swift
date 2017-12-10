@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // User is already signed-up, so we skip the signp screen
-    if isUserSignedUp() {
-      return true
-    }
+//    if isUserSignedUp() {
+//      return true
+//    }
 
     window = UIWindow(frame: UIScreen.main.bounds)
 
