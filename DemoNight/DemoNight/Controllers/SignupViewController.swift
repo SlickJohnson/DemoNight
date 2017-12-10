@@ -22,7 +22,6 @@ class SignupViewController: UIViewController {
     super.didReceiveMemoryWarning()
   }
 
-
   /// Done button action on signup screen
   @IBAction func submitNumber(_ sender: UIButton) {
     createUser()
@@ -46,6 +45,4 @@ extension SignupViewController {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     present(storyboard.instantiateInitialViewController()!, animated: true, completion: nil)
   }
-
-
 }
