@@ -6,24 +6,25 @@ import UIKit
   /// Spacing between characters
   @IBInspectable var characterSpacing: CGFloat = 0.0 {
     didSet {
-      changePlaceholderColor(to: .black)
       adjustTextSpacing()
+      adjustPlaceholderSpacing()
+      changePlaceholderColor(to: .black)
     }
   }
 
   /// Text within the UITextField. Set the value triggers spacing adjustment.
   override var text: String? {
     didSet {
-      changePlaceholderColor(to: .black)
       adjustTextSpacing()
+      changePlaceholderColor(to: .black)
     }
   }
 
   /// The placeholder text of the UITextField
   override var placeholder: String? {
     didSet {
-      changePlaceholderColor(to: .black)
       adjustPlaceholderSpacing()
+      changePlaceholderColor(to: .black)
     }
   }
 

@@ -12,11 +12,11 @@ import CoreLocation
 import MapKit
 
 class GameScene: SKScene {
-  private var label : SKLabelNode?
-  private var spinnyNode : SKShapeNode?
+  private var label: SKLabelNode?
+  private var spinnyNode: SKShapeNode?
 
   var locationManager = CLLocationManager()
-  var mapView: MKMapView = MKMapView()
+  var mapView: MKMapView!
 
   override func didMove(to view: SKView) {
     // Get label node from scene and store it for use later
@@ -38,6 +38,33 @@ class GameScene: SKScene {
                                         SKAction.fadeOut(withDuration: 0.5),
                                         SKAction.removeFromParent()]))
     }
+
+    mapView = MKMapView()
+    mapView.alpha = 0.2
+
+//    let userCoords = locationManager.location?.coordinate
+//
+//    let latDelta: CLLocationDegrees = 5
+//
+//    let lonDelta: CLLocationDegrees = 5
+//
+//    let span = MKCoordinateSpanMake(latDelta, lonDelta)
+//
+//    let location = CLLocationCoordinate2DMake((userCoords?.latitude)!, (userCoords?.longitude)!)
+//
+//    let region = MKCoordinateRegionMake(location, span)
+
+//    mapView.setRegion(region, animated: true)
+    mapView.showsUserLocation = true
+//    mapView.isScrollEnabled = false
+
+    mapView.frame = CGRect(
+        x: 0,
+        y: 0,
+        width: (self.view?.frame.size.width)!,
+        height: (self.view?.frame.size.height)!)
+
+    view.addSubview(mapView)
 
     setupLocationManager()
   }
@@ -115,12 +142,12 @@ extension GameScene: CLLocationManagerDelegate {
     let position = Position()
     position.latitude = locValue.latitude
     position.longitude = locValue.longitude
-
     print(position)
     if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-      let position = mapView.convert(position.coordinate, toPointTo: mapView)
+      let nodePosition = mapView.convert(position.coordinate, toPointTo: view!)
+      print(nodePosition)
 
-      n.position = position
+      n.position = nodePosition
       n.strokeColor = SKColor.green
       self.addChild(n)
     }

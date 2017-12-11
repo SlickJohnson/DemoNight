@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23224B0004482AE1AAE4A7D2 /* Pods_DemoNight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6978E8A19EFCE4F5534844 /* Pods_DemoNight.framework */; };
+		3D5FA4F71FDE0DDA008435E4 /* Sockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5FA4F61FDE0DDA008435E4 /* Sockets.swift */; };
+		3D7F75D71FDEF82600959E8B /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F75D61FDEF82600959E8B /* Geofence.swift */; };
 		3DA273CB1FDC922F00FCD309 /* Object+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA273CA1FDC922F00FCD309 /* Object+Extensions.swift */; };
 		3DA273CD1FDCB90700FCD309 /* SpacedFontTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA273CC1FDCB90700FCD309 /* SpacedFontTextField.swift */; };
 		3DA273D01FDCBE1F00FCD309 /* SFMono-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3DA273CE1FDCBDAC00FCD309 /* SFMono-Bold.otf */; };
@@ -31,7 +33,9 @@
 		1E30A9EF24B90E5107DB628E /* Pods-DemoNight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoNight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoNight/Pods-DemoNight.debug.xcconfig"; sourceTree = "<group>"; };
 		2F2B6A5C841ACDD8F62FBC28 /* Pods-DemoNight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoNight.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoNight/Pods-DemoNight.release.xcconfig"; sourceTree = "<group>"; };
 		38CEB7CE873874ED879FB2E8 /* Pods-DaaankLocationTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaaankLocationTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaaankLocationTracking/Pods-DaaankLocationTracking.debug.xcconfig"; sourceTree = "<group>"; };
+		3D5FA4F61FDE0DDA008435E4 /* Sockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sockets.swift; sourceTree = "<group>"; };
 		3D7D288E1FDBE111007FD84F /* DemoNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D7F75D61FDEF82600959E8B /* Geofence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
 		3DA273CA1FDC922F00FCD309 /* Object+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Extensions.swift"; sourceTree = "<group>"; };
 		3DA273CC1FDCB90700FCD309 /* SpacedFontTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacedFontTextField.swift; sourceTree = "<group>"; };
 		3DA273CE1FDCBDAC00FCD309 /* SFMono-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Bold.otf"; sourceTree = "<group>"; };
@@ -67,6 +71,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D5FA4F81FDE0DE1008435E4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		3D7D28851FDBE110007FD84F = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +99,8 @@
 		3D7D28901FDBE111007FD84F /* DemoNight */ = {
 			isa = PBXGroup;
 			children = (
+				3D5FA4F81FDE0DE1008435E4 /* Networking */,
+				3D5FA4F61FDE0DDA008435E4 /* Sockets.swift */,
 				3DA273CF1FDCBDB200FCD309 /* Fonts */,
 				3DBB87BE1FDC148500B1773D /* Views */,
 				3DBB87B61FDC148400B1773D /* Controllers */,
@@ -148,6 +161,7 @@
 			children = (
 				3DBB87BF1FDC148500B1773D /* SpacedFontLabel.swift */,
 				3DA273CC1FDCB90700FCD309 /* SpacedFontTextField.swift */,
+				3D7F75D61FDEF82600959E8B /* Geofence.swift */,
 			);
 			name = Views;
 			path = DemoNight/Views;
@@ -318,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DBB87CF1FDC148500B1773D /* AppDelegate.swift in Sources */,
+				3D5FA4F71FDE0DDA008435E4 /* Sockets.swift in Sources */,
 				3DBB87AE1FDC144E00B1773D /* UserData.swift in Sources */,
 				3DF0DCDA1FDCDDB8005CE798 /* PhoneNumberViewController.swift in Sources */,
 				3DBB87CA1FDC148500B1773D /* GameScene.swift in Sources */,
@@ -325,6 +340,7 @@
 				3DF0DCDC1FDCEE13005CE798 /* UIViewController+Extensions.swift in Sources */,
 				3DA273CD1FDCB90700FCD309 /* SpacedFontTextField.swift in Sources */,
 				3DBB87CD1FDC148500B1773D /* SpacedFontLabel.swift in Sources */,
+				3D7F75D71FDEF82600959E8B /* Geofence.swift in Sources */,
 				3DBB87C31FDC148500B1773D /* GameViewController.swift in Sources */,
 				3DBB87C81FDC148500B1773D /* ViewController.swift in Sources */,
 			);

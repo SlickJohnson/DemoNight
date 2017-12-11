@@ -53,5 +53,42 @@
             </objects>
             <point key="canvasLocation" x="472.80000000000001" y="74.212893553223395"/>
         </scene>
+        <!--Phone Number View Controller-->
+        <scene sceneID="wez-6t-63j">
+            <objects>
+                <viewController id="moS-am-Pct" customClass="PhoneNumberViewController" customModule="DemoNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I3t-0a-JRR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ENTER CODE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OhK-qI-WNI" customClass="SpacedFontTextField" customModule="DemoNight" customModuleProvider="target">
+                                <rect key="frame" x="89" y="333.5" width="197" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.49019607840000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OhK-qI-WNI" firstAttribute="width" secondItem="I3t-0a-JRR" secondAttribute="width" multiplier="197/375" id="9WS-Sa-XJc"/>
+                            <constraint firstItem="OhK-qI-WNI" firstAttribute="centerX" secondItem="ngu-8Q-y9B" secondAttribute="centerX" id="A2I-BR-e9T"/>
+                            <constraint firstItem="OhK-qI-WNI" firstAttribute="height" secondItem="I3t-0a-JRR" secondAttribute="height" multiplier="21/667" id="ku2-fP-54J"/>
+                            <constraint firstItem="OhK-qI-WNI" firstAttribute="centerY" secondItem="ngu-8Q-y9B" secondAttribute="centerY" id="sX4-cS-OCO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ngu-8Q-y9B"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="OhK-qI-WNI" id="vCI-Bi-01T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ig-Of-7hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="74"/>
+        </scene>
     </scenes>
 </document>
