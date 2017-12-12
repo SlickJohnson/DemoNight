@@ -7,7 +7,7 @@ import UIKit
       adjustTextSpacing()
     }
   }
-
+  
   override var text: String? {
     didSet {
       adjustTextSpacing()

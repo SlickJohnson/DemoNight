@@ -2,6 +2,8 @@ import UIKit
 
 /// UITexdtField with easily adjustable character spacing
 @IBDesignable class SpacedFontTextField: UITextField {
+  /// Done button that sits right above the keyboard when Textfield is being edited.
+  var doneButton: UIBarButtonItem?
 
   /// Spacing between characters
   @IBInspectable var characterSpacing: CGFloat = 0.0 {
@@ -113,3 +115,24 @@ extension SpacedFontTextField {
     adjustTextSpacing()
   }
 }
+
+// MARK: - Convenient methods
+extension SpacedFontTextField {
+  /**
+   Adds a simple 'Done' button to the top of the iOS keyboard.
+   */
+  func addDoneButtonOnKeyboard() {
+    if let doneButton = doneButton {
+      let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 350, height: 20))
+      doneToolbar.barStyle = UIBarStyle.blackTranslucent
+
+      let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+      
+      doneToolbar.items = [flexSpace, doneButton]
+      doneToolbar.sizeToFit()
+
+      self.inputAccessoryView = doneToolbar
+    }
+  }
+}
+

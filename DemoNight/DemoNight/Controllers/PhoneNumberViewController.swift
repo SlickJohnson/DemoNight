@@ -12,12 +12,13 @@ import UIKit
 class PhoneNumberViewController: UIViewController {
   /// Textfield for user's phone number
   @IBOutlet weak var phoneNumberTextField: SpacedFontTextField!
-  /// Delegate that handles page scrolling in UIPageViewControllers
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     addHideKeyboardGesture()
-    addDoneButtonOnKeyboard()
+    phoneNumberTextField.doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+    phoneNumberTextField.addDoneButtonOnKeyboard()
+    phoneNumberTextField.delegate = self
   }
 
   override func didReceiveMemoryWarning() {
@@ -36,23 +37,7 @@ class PhoneNumberViewController: UIViewController {
 // MARK: - Keyboard
 extension PhoneNumberViewController {
   /**
-   Adds a simple 'Done' button to the top of the iOS keyboard.
-   */
-  func addDoneButtonOnKeyboard() {
-    let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 350, height: 20))
-    doneToolbar.barStyle = UIBarStyle.blackTranslucent
-
-    let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    let done = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
-
-    doneToolbar.items = [flexSpace, done]
-    doneToolbar.sizeToFit()
-
-    phoneNumberTextField.inputAccessoryView = doneToolbar
-  }
-
-  /**
-   Triggers 'scrollToNextPage' for the SignupPageDelegate
+   Triggers 'scrollToNextPage' for the SignupPageDelegate.
    */
   @objc func doneButtonAction() {
     createUser()
@@ -62,18 +47,32 @@ extension PhoneNumberViewController {
 
 // MARK: - Helper methods
 extension PhoneNumberViewController {
-  /// Create a user with given phone number
+  /// Create a user with given phone number.
   func createUser() {
     guard let phoneNumber = phoneNumberTextField.text else { return }
 
     let user = User()
     user.phoneNumber = phoneNumber
     user.save()
+
+    socketClient.signupUser(phoneNumber: phoneNumber)
   }
 
-  /// Set ViewController to GameViewController (main screen)
-  func goToMainView() {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    present(storyboard.instantiateInitialViewController()!, animated: true, completion: nil)
+  /// Set ViewController to GameViewController (main screen).
+  @objc func goToMainView() {
+    let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+    present(storyboard.instantiateViewController(withIdentifier: "VerificationViewController"), animated: true, completion: nil)
+  }
+}
+
+// MARK: - UITextFieldDelegate
+extension PhoneNumberViewController: UITextFieldDelegate {
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool  {
+    let currentCharacterCount = textField.text?.count ?? 0
+    if (range.length + range.location > currentCharacterCount){
+      return false
+    }
+    let newLength = currentCharacterCount + string.count - range.length
+    return newLength <= 25
   }
 }

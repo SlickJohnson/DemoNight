@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LWT-TE-lUW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFMono-Bold.otf">
+            <string>SFMono-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="DemoNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,5 +30,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Permission View Controller-->
+        <scene sceneID="vdU-CW-F5H">
+            <objects>
+                <viewController storyboardIdentifier="PermissionViewController" id="LWT-TE-lUW" customClass="PermissionViewController" customModule="DemoNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h0g-bK-dz5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main-screen-bottom-label" translatesAutoresizingMaskIntoConstraints="NO" id="Vke-gz-97Q">
+                                <rect key="frame" x="48" y="496" width="240" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjs-7O-8h1" customClass="CustomButton" customModule="DemoNight" customModuleProvider="target">
+                                <rect key="frame" x="58.5" y="351" width="275" height="45"/>
+                                <color key="backgroundColor" red="0.52156862749999999" green="0.086274509799999996" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="14"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-screen-top-label" translatesAutoresizingMaskIntoConstraints="NO" id="ZDM-dg-4j1">
+                                <rect key="frame" x="38" y="172" width="268" height="123"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALLOW ACCESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8za-Xo-3H7" customClass="SpacedFontLabel" customModule="DemoNight" customModuleProvider="target">
+                                <rect key="frame" x="77.5" y="364.5" width="145.5" height="17"/>
+                                <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="3.1099999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.49019607840000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZDM-dg-4j1" firstAttribute="centerY" secondItem="9Yx-x9-hX8" secondAttribute="centerY" multiplier="0.68" id="0xc-nb-bZ5"/>
+                            <constraint firstItem="Zjs-7O-8h1" firstAttribute="centerX" secondItem="9Yx-x9-hX8" secondAttribute="centerX" multiplier="1.045" id="2Gj-vI-Iqr"/>
+                            <constraint firstItem="ZDM-dg-4j1" firstAttribute="centerX" secondItem="9Yx-x9-hX8" secondAttribute="centerX" multiplier="0.918" id="3ao-6o-WGZ"/>
+                            <constraint firstItem="Zjs-7O-8h1" firstAttribute="width" secondItem="h0g-bK-dz5" secondAttribute="width" multiplier="275/375" id="JJ0-Id-lJv"/>
+                            <constraint firstItem="ZDM-dg-4j1" firstAttribute="width" secondItem="h0g-bK-dz5" secondAttribute="width" multiplier="268/375" id="NEt-qS-m46"/>
+                            <constraint firstItem="ZDM-dg-4j1" firstAttribute="height" secondItem="h0g-bK-dz5" secondAttribute="height" multiplier="123/667" id="S93-Mj-99z"/>
+                            <constraint firstItem="8za-Xo-3H7" firstAttribute="centerY" secondItem="Zjs-7O-8h1" secondAttribute="centerY" id="gSd-5j-fZt"/>
+                            <constraint firstItem="Zjs-7O-8h1" firstAttribute="height" secondItem="h0g-bK-dz5" secondAttribute="height" multiplier="45/667" id="phn-Jg-9SZ"/>
+                            <constraint firstItem="Zjs-7O-8h1" firstAttribute="centerY" secondItem="9Yx-x9-hX8" secondAttribute="centerY" multiplier="1.088" id="suB-gn-rvC"/>
+                            <constraint firstItem="8za-Xo-3H7" firstAttribute="centerX" secondItem="Zjs-7O-8h1" secondAttribute="centerX" multiplier="0.7646" id="uRH-EZ-hxj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Yx-x9-hX8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7AS-Iw-lxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249" y="34"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="main-screen-bottom-label" width="188" height="59"/>
+        <image name="main-screen-top-label" width="177" height="97"/>
+    </resources>
 </document>
