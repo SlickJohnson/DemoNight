@@ -12,7 +12,6 @@
 		3D7F75D71FDEF82600959E8B /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F75D61FDEF82600959E8B /* Geofence.swift */; };
 		3D7F75DD1FDF884500959E8B /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F75DC1FDF884500959E8B /* VerificationViewController.swift */; };
 		3D9D0B571FE09359000FD5EB /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9D0B561FE09359000FD5EB /* PermissionViewController.swift */; };
-		3D9D0B591FE0964A000FD5EB /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9D0B581FE0964A000FD5EB /* GlobalVariables.swift */; };
 		3D9D0B5D1FE0AB3E000FD5EB /* RealtimeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9D0B5C1FE0AB3E000FD5EB /* RealtimeLocationViewController.swift */; };
 		3D9D0B5F1FE0B07B000FD5EB /* CustomizableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9D0B5E1FE0B07B000FD5EB /* CustomizableButton.swift */; };
 		3DA273CB1FDC922F00FCD309 /* Object+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA273CA1FDC922F00FCD309 /* Object+Extensions.swift */; };
@@ -21,13 +20,15 @@
 		3DBB87AE1FDC144E00B1773D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87AD1FDC144E00B1773D /* User.swift */; };
 		3DBB87C41FDC148500B1773D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87B11FDC148400B1773D /* LaunchScreen.storyboard */; };
 		3DBB87C51FDC148500B1773D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87B31FDC148400B1773D /* Main.storyboard */; };
-		3DBB87C61FDC148500B1773D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87B51FDC148400B1773D /* GameScene.sks */; };
+		3DBB87C61FDC148500B1773D /* MapScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87B51FDC148400B1773D /* MapScene.sks */; };
 		3DBB87C91FDC148500B1773D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87B91FDC148400B1773D /* Assets.xcassets */; };
-		3DBB87CA1FDC148500B1773D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87BA1FDC148400B1773D /* GameScene.swift */; };
+		3DBB87CA1FDC148500B1773D /* MapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87BA1FDC148400B1773D /* MapScene.swift */; };
 		3DBB87CC1FDC148500B1773D /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87BD1FDC148400B1773D /* OnBoarding.storyboard */; };
 		3DBB87CD1FDC148500B1773D /* SpacedFontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87BF1FDC148500B1773D /* SpacedFontLabel.swift */; };
 		3DBB87CE1FDC148500B1773D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB87C01FDC148500B1773D /* Actions.sks */; };
 		3DBB87CF1FDC148500B1773D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBB87C11FDC148500B1773D /* AppDelegate.swift */; };
+		3DDE6A511FE0DCEE008765E0 /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE6A501FE0DCEE008765E0 /* CLLocationCoordinate2D+Extensions.swift */; };
+		3DDE6A771FE163A5008765E0 /* LocationSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE6A761FE163A5008765E0 /* LocationSingleton.swift */; };
 		3DF0DCDA1FDCDDB8005CE798 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0DCD91FDCDDB8005CE798 /* PhoneNumberViewController.swift */; };
 		3DF0DCDC1FDCEE13005CE798 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF0DCDB1FDCEE13005CE798 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +42,6 @@
 		3D7F75D61FDEF82600959E8B /* Geofence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
 		3D7F75DC1FDF884500959E8B /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		3D9D0B561FE09359000FD5EB /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
-		3D9D0B581FE0964A000FD5EB /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		3D9D0B5C1FE0AB3E000FD5EB /* RealtimeLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtimeLocationViewController.swift; sourceTree = "<group>"; };
 		3D9D0B5E1FE0B07B000FD5EB /* CustomizableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableButton.swift; sourceTree = "<group>"; };
 		3DA273CA1FDC922F00FCD309 /* Object+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Extensions.swift"; sourceTree = "<group>"; };
@@ -50,14 +50,16 @@
 		3DBB87AD1FDC144E00B1773D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3DBB87B21FDC148400B1773D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DBB87B41FDC148400B1773D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		3DBB87B51FDC148400B1773D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = DemoNight/GameScene.sks; sourceTree = "<group>"; };
+		3DBB87B51FDC148400B1773D /* MapScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MapScene.sks; path = DemoNight/MapScene.sks; sourceTree = "<group>"; };
 		3DBB87B91FDC148400B1773D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DemoNight/Assets.xcassets; sourceTree = "<group>"; };
-		3DBB87BA1FDC148400B1773D /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = DemoNight/GameScene.swift; sourceTree = "<group>"; };
+		3DBB87BA1FDC148400B1773D /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapScene.swift; path = DemoNight/MapScene.swift; sourceTree = "<group>"; };
 		3DBB87BD1FDC148400B1773D /* OnBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		3DBB87BF1FDC148500B1773D /* SpacedFontLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacedFontLabel.swift; sourceTree = "<group>"; };
 		3DBB87C01FDC148500B1773D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Actions.sks; path = DemoNight/Actions.sks; sourceTree = "<group>"; };
 		3DBB87C11FDC148500B1773D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DemoNight/AppDelegate.swift; sourceTree = "<group>"; };
 		3DBB87C21FDC148500B1773D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DDE6A501FE0DCEE008765E0 /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
+		3DDE6A761FE163A5008765E0 /* LocationSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSingleton.swift; sourceTree = "<group>"; };
 		3DF0DCD91FDCDDB8005CE798 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
 		3DF0DCDB1FDCEE13005CE798 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		97D5615D8A4DF61735E32174 /* Pods-DaaankLocationTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaaankLocationTracking.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaaankLocationTracking/Pods-DaaankLocationTracking.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,14 +108,15 @@
 		3D7D28901FDBE111007FD84F /* DemoNight */ = {
 			isa = PBXGroup;
 			children = (
+				3DDE6A781FE167C8008765E0 /* Singletons */,
 				3D5FA4F81FDE0DE1008435E4 /* Networking */,
 				3DA273CF1FDCBDB200FCD309 /* Fonts */,
 				3DBB87BE1FDC148500B1773D /* Views */,
 				3DBB87B61FDC148400B1773D /* Controllers */,
 				3DBB87AC1FDC144E00B1773D /* Models */,
 				3DA273C91FDC922200FCD309 /* Helpers */,
-				3DBB87B51FDC148400B1773D /* GameScene.sks */,
-				3DBB87BA1FDC148400B1773D /* GameScene.swift */,
+				3DBB87B51FDC148400B1773D /* MapScene.sks */,
+				3DBB87BA1FDC148400B1773D /* MapScene.swift */,
 				3DBB87BD1FDC148400B1773D /* OnBoarding.storyboard */,
 				3DBB87B11FDC148400B1773D /* LaunchScreen.storyboard */,
 				3DBB87B31FDC148400B1773D /* Main.storyboard */,
@@ -140,7 +143,7 @@
 			children = (
 				3DF0DCDB1FDCEE13005CE798 /* UIViewController+Extensions.swift */,
 				3DA273CA1FDC922F00FCD309 /* Object+Extensions.swift */,
-				3D9D0B581FE0964A000FD5EB /* GlobalVariables.swift */,
+				3DDE6A501FE0DCEE008765E0 /* CLLocationCoordinate2D+Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -182,6 +185,14 @@
 			);
 			name = Views;
 			path = DemoNight/Views;
+			sourceTree = "<group>";
+		};
+		3DDE6A781FE167C8008765E0 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				3DDE6A761FE163A5008765E0 /* LocationSingleton.swift */,
+			);
+			path = Singletons;
 			sourceTree = "<group>";
 		};
 		80E13BAAEFD52CC780CAC9C3 /* Pods */ = {
@@ -273,7 +284,7 @@
 			files = (
 				3DA273D01FDCBE1F00FCD309 /* SFMono-Bold.otf in Resources */,
 				3DBB87C51FDC148500B1773D /* Main.storyboard in Resources */,
-				3DBB87C61FDC148500B1773D /* GameScene.sks in Resources */,
+				3DBB87C61FDC148500B1773D /* MapScene.sks in Resources */,
 				3DBB87C41FDC148500B1773D /* LaunchScreen.storyboard in Resources */,
 				3DBB87C91FDC148500B1773D /* Assets.xcassets in Resources */,
 				3DBB87CC1FDC148500B1773D /* OnBoarding.storyboard in Resources */,
@@ -351,13 +362,14 @@
 				3D7F75DD1FDF884500959E8B /* VerificationViewController.swift in Sources */,
 				3DBB87CF1FDC148500B1773D /* AppDelegate.swift in Sources */,
 				3D5FA4F71FDE0DDA008435E4 /* SocketClient.swift in Sources */,
+				3DDE6A511FE0DCEE008765E0 /* CLLocationCoordinate2D+Extensions.swift in Sources */,
 				3DBB87AE1FDC144E00B1773D /* User.swift in Sources */,
+				3DDE6A771FE163A5008765E0 /* LocationSingleton.swift in Sources */,
 				3DF0DCDA1FDCDDB8005CE798 /* PhoneNumberViewController.swift in Sources */,
-				3DBB87CA1FDC148500B1773D /* GameScene.swift in Sources */,
+				3DBB87CA1FDC148500B1773D /* MapScene.swift in Sources */,
 				3DA273CB1FDC922F00FCD309 /* Object+Extensions.swift in Sources */,
 				3DF0DCDC1FDCEE13005CE798 /* UIViewController+Extensions.swift in Sources */,
 				3DA273CD1FDCB90700FCD309 /* SpacedFontTextField.swift in Sources */,
-				3D9D0B591FE0964A000FD5EB /* GlobalVariables.swift in Sources */,
 				3D9D0B5D1FE0AB3E000FD5EB /* RealtimeLocationViewController.swift in Sources */,
 				3DBB87CD1FDC148500B1773D /* SpacedFontLabel.swift in Sources */,
 				3D9D0B571FE09359000FD5EB /* PermissionViewController.swift in Sources */,

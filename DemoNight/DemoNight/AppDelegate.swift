@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // User is already signed-up, so we skip the signp screen
-    if isUserSignedUp() {
-      return true
-    }
+//    if isUserSignedUp() {
+//      return true
+//    }
 
     window = UIWindow(frame: UIScreen.main.bounds)
 
@@ -46,13 +46,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: - Helper functions
 extension AppDelegate {
-  /// Check if there is a User in Realm.
+  /// Check if user has already signed up.
   func isUserSignedUp() -> Bool {
-    if UserDefaults.standard.object(forKey: "User") == nil{
-      return false
-    }
+    do {
+      let realm = try Realm()
+      if realm.objects(User.self).first != nil {
+        return true
+      }
 
-    return true
+      return false
+    } catch let error as NSError {
+      fatalError(error.localizedDescription)
+    }
   }
 }
 

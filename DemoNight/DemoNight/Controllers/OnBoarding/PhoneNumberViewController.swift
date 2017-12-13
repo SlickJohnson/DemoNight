@@ -12,13 +12,16 @@ import UIKit
 class PhoneNumberViewController: UIViewController {
   /// Textfield for user's phone number
   @IBOutlet weak var phoneNumberTextField: SpacedFontTextField!
-  
+  var socketClient: SocketClient!
+
   override func viewDidLoad() {
     super.viewDidLoad()
     addHideKeyboardGesture()
     phoneNumberTextField.doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
     phoneNumberTextField.addDoneButtonOnKeyboard()
     phoneNumberTextField.delegate = self
+
+    socketClient = SocketClient.shared
   }
 
   override func didReceiveMemoryWarning() {
@@ -55,7 +58,7 @@ extension PhoneNumberViewController {
     user.phoneNumber = phoneNumber
     user.save()
 
-    GlobalInstances.socketClient.signupUser(with: phoneNumber)
+    socketClient.signupUser(with: phoneNumber)
   }
 
   /// Set ViewController to GameViewController (main screen).

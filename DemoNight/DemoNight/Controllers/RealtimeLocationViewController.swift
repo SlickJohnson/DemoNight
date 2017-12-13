@@ -12,21 +12,20 @@ import GameplayKit
 
 class RealtimeLocationViewController: UIViewController {
   /// SKView for the location tracking view.
-  @IBOutlet weak var gameSceneView: SKView!
-
+  @IBOutlet weak var mapSceneView: SKView!
   @IBOutlet weak var toggleLocationTrackingButton: CustomizableButton!
+  @IBOutlet weak var locationTrackingButtonLabel: UILabel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // MARK: - UISetup
-    gameSceneView.layer.borderWidth = 1
-    gameSceneView.layer.borderColor = UIColor.black.cgColor
+    mapSceneView.layer.borderWidth = 1
+    mapSceneView.layer.borderColor = UIColor.black.cgColor
 
     toggleLocationTrackingButton.addDropShadow(color: .black, opacity: 0.09, offset: CGSize(width: 0, height: -2), radius: 28, scale: true)
     
-    loadGameScene()
-    
+    loadMapScene()
   }
 
   override var shouldAutorotate: Bool {
@@ -52,7 +51,14 @@ class RealtimeLocationViewController: UIViewController {
 
   /// Turns on/off user location tracking.
   @IBAction func toggleLocationTracking(_ sender: Any) {
-
+    var locationSingelton = LocationSingleton.shared
+    locationSingelton.toggleLocationUpdates()
+    
+    if locationSingelton.isLocationUpdating {
+      locationTrackingButtonLabel.text = "*TAP TO TURN OFF*"
+    } else {
+      locationTrackingButtonLabel.text = "*TAP TO TURN ON*"
+    }
   }
 }
 
@@ -61,19 +67,16 @@ extension RealtimeLocationViewController {
   /**
    Load the scene where the user location tracking will be displayed.
    */
-  func loadGameScene() {
+  func loadMapScene() {
     // Load the SKScene from 'GameScene.sks'
-    if let scene = SKScene(fileNamed: "GameScene") {
+    if let scene = SKScene(fileNamed: "MapScene") {
       // Set the scale mode to scale to fit the window
       scene.scaleMode = .aspectFill
 
       // Present the scene
-      gameSceneView.presentScene(scene)
+      mapSceneView.presentScene(scene)
 
-      gameSceneView.ignoresSiblingOrder = true
-
-      gameSceneView.showsFPS = true
-      gameSceneView.showsNodeCount = true
+      mapSceneView.ignoresSiblingOrder = true
     }
   }
 }

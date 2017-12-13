@@ -1,5 +1,5 @@
 //
-//  Networking.swift
+//  SocketClient.swift
 //  DemoNight
 //
 //  Created by Willie Johnson on 10/12/2017.
@@ -9,8 +9,20 @@
 import Foundation
 import SocketIO
 
+/// All variables needed to setup the daaank iOS socket client.
+struct SocketVariables {
+  /// Url for the Daaank server.
+  static let url = "https://adcaa975.ngrok.io/"
+  /// Path to the server socket.
+  static let path = "/demonight/socket"
+  /// Bool to show or hide debug log for socket client.
+  static let debug = false
+}
+
 /// Handle communication between server and client.
-class SocketClient {
+final class SocketClient {
+  /// Shared SocketClient instance.
+  static let shared = SocketClient()
   /// Handles communication with server.
   let manager: SocketManager!
   /// Daaank server client.
@@ -39,7 +51,7 @@ class SocketClient {
   }
 
   /// Initalize SocketManager and setup event handlers.
-  init() {
+  private init() {
     manager = SocketManager(socketURL: URL(string: SocketVariables.url)!,
                             config:[.path(SocketVariables.path), .log(SocketVariables.debug), .compress])
     socket = manager.defaultSocket

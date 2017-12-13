@@ -20,11 +20,11 @@ class Visit: Object {
 /// Holds the position and time of the user (updated every second).
 class Position: Object {
   /// Poisition's time stamp.
-  var time = Date()
+  @objc dynamic var time = Date()
   /// Position's latitude, defaults to "0.0".
-  var latitude = 0.0
+  @objc dynamic var latitude = 0.0
   /// Position's longitude, defaults to "0.0".
-  var longitude = 0.0
+  @objc dynamic var longitude = 0.0
   // Convenient CLLocationCoordate2D of the position's latitude and longitude. Not represented in Realm.
   var coordinate: CLLocationCoordinate2D {
     return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

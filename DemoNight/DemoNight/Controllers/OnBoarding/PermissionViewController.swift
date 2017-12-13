@@ -10,8 +10,6 @@ import UIKit
 import CoreLocation
 
 class PermissionViewController: UIViewController {
-  /// Copy of the global CLLocationManager instance.
-  var locationManager = GlobalInstances.locationManager
   @IBOutlet weak var allowAccesButton: CustomizableButton!
   
   override func viewDidLoad() {
@@ -26,6 +24,8 @@ class PermissionViewController: UIViewController {
 
   // MARK: - IBActions
   @IBAction func allowAccessAction(_ sender: UIButton) {
+    guard let locationManager = LocationSingleton.shared.locationManager else { return }
+
     locationManager.requestAlwaysAuthorization()
     locationManager.requestWhenInUseAuthorization()
 

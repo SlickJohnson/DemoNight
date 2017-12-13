@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,17 +21,17 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="RealtimeLocationViewController" customModule="DemoNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-screen-background" translatesAutoresizingMaskIntoConstraints="NO" id="mEC-ge-jrc">
-                                <rect key="frame" x="0.0" y="-5" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKC-cq-Zmc" customClass="SKView">
-                                <rect key="frame" x="54" y="48.666666666666657" width="296" height="489.33333333333337"/>
+                                <rect key="frame" x="54" y="44.5" width="296" height="402"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAIN AREA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zk-Pi-OPw" customClass="SpacedFontLabel" customModule="DemoNight" customModuleProvider="target">
-                                        <rect key="frame" x="116.66666666666666" y="237.66666666666666" width="64.666666666666657" height="14"/>
+                                        <rect key="frame" x="104" y="194" width="88.5" height="14"/>
                                         <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -49,14 +49,14 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYn-0R-vZv" customClass="CustomizableButton" customModule="DemoNight" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="705" width="375" height="73"/>
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="toggleLocationTracking:" destination="BV1-FR-VrT" eventType="touchUpInside" id="j5C-HO-i98"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARING LOCATION DATA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-Iv-esc" customClass="SpacedFontLabel" customModule="DemoNight" customModuleProvider="target">
-                                <rect key="frame" x="113.99999999999999" y="723.33333333333337" width="147.66666666666663" height="14"/>
+                                <rect key="frame" x="85.5" y="620.5" width="204" height="14"/>
                                 <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,7 +67,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* TAP TO TURN ON *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8N-jd-zqK">
-                                <rect key="frame" x="136.33333333333334" y="740" width="103.33333333333334" height="13"/>
+                                <rect key="frame" x="136.5" y="637" width="103.5" height="13"/>
                                 <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -95,7 +95,8 @@
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <connections>
-                        <outlet property="gameSceneView" destination="oKC-cq-Zmc" id="g1K-JX-QrG"/>
+                        <outlet property="locationTrackingButtonLabel" destination="f8N-jd-zqK" id="oLf-ay-pt2"/>
+                        <outlet property="mapSceneView" destination="oKC-cq-Zmc" id="352-I3-5bd"/>
                         <outlet property="toggleLocationTrackingButton" destination="LYn-0R-vZv" id="Cjb-6Z-9Os"/>
                     </connections>
                 </viewController>
