@@ -16,7 +16,7 @@ class GameScene: SKScene {
   private var positionLabel: SKLabelNode!
   private var spinnyNode: SKShapeNode?
   
-  var locationManager = CLLocationManager()
+  var locationManager = GlobalInstances.locationManager
   var mapView: MKMapView!
   
   var geoFence: Geofence!
@@ -106,13 +106,11 @@ private extension GameScene {
    Setup location manager used to track user location.
    */
   func setupLocationManager() {
-    
     locationManager.delegate = self
     locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
     locationManager.allowsBackgroundLocationUpdates = true
     locationManager.pausesLocationUpdatesAutomatically = false
     locationManager.startUpdatingLocation()
-    
   }
   /**
    Setup Geofence to handle user location information.

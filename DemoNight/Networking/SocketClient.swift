@@ -11,28 +11,31 @@ import SocketIO
 
 /// Handle communication between server and client.
 class SocketClient {
+  /// Handles communication with server.
   let manager: SocketManager!
-  /// daaank server socket.
+  /// Daaank server client.
   let socket: SocketIOClient!
 
   /// Server connect event handler.
   let connect: NormalCallback = {data, ack in
     print("Socket connect")
   }
-
   /// User verified event handler.
   let verifyUser: NormalCallback = {data, ack in
     print("User verified")
   }
-
   /// Test server event handler.
   let message: NormalCallback = {data, ack in
     print("Message")
   }
-
   /// Test server event handler.
   let user: NormalCallback = {data, ack in
     print(data)
+  }
+
+  /// Code verification event handler.
+  let codeVerification: NormalCallback = {data, act in
+    print("USER VERIFIED")
   }
 
   /// Initalize SocketManager and setup event handlers.
@@ -54,6 +57,7 @@ extension SocketClient {
   func setupEventHandlers() {
     socket.on(clientEvent: .connect, callback: connect)
     socket.on("user", callback: user)
+    socket.on("verify-user", callback: verifyUser)
   }
 
   /**
@@ -61,7 +65,16 @@ extension SocketClient {
 
    - parameter user: A user object created using the inputed phone number.
    */
-  func signupUser(phoneNumber: String) {
-    socket.emit("phone-number", with: [phoneNumber])
+  func signupUser(with phoneNumber: String) {
+    socket.emit("phone-number", phoneNumber)
+  }
+
+  /**
+   Check the verification code typed by user.
+
+   - parameter verificationCode: A string of the verification code.
+   */
+  func check(_ verificationCode: String) {
+    socket.emit("verify-code", verificationCode)
   }
 }

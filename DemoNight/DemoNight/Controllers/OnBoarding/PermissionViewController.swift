@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import CoreLocation
 
 class PermissionViewController: UIViewController {
+  /// Copy of the global CLLocationManager instance.
+  var locationManager = GlobalInstances.locationManager
+  @IBOutlet weak var allowAccesButton: CustomizableButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    allowAccesButton.setRadius(to: 4)
   }
 
   override func didReceiveMemoryWarning() {
@@ -19,11 +26,12 @@ class PermissionViewController: UIViewController {
 
   // MARK: - IBActions
   @IBAction func allowAccessAction(_ sender: UIButton) {
-    self.locationManager.requestAlwaysAuthorization()
-    self.locationManager.requestWhenInUseAuthorization()
+    locationManager.requestAlwaysAuthorization()
+    locationManager.requestWhenInUseAuthorization()
 
     if CLLocationManager.locationServicesEnabled() {
-      
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      present(storyboard.instantiateInitialViewController()!, animated: true, completion: nil)
     }
   }
 }

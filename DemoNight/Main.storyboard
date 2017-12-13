@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LWT-TE-lUW">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,78 +16,95 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Game View Controller-->
+        <!--Realtime Location View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="DemoNight" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Permission View Controller-->
-        <scene sceneID="vdU-CW-F5H">
-            <objects>
-                <viewController storyboardIdentifier="PermissionViewController" id="LWT-TE-lUW" customClass="PermissionViewController" customModule="DemoNight" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h0g-bK-dz5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BV1-FR-VrT" customClass="RealtimeLocationViewController" customModule="DemoNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main-screen-bottom-label" translatesAutoresizingMaskIntoConstraints="NO" id="Vke-gz-97Q">
-                                <rect key="frame" x="48" y="496" width="240" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-screen-background" translatesAutoresizingMaskIntoConstraints="NO" id="mEC-ge-jrc">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="812"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjs-7O-8h1" customClass="CustomButton" customModule="DemoNight" customModuleProvider="target">
-                                <rect key="frame" x="58.5" y="351" width="275" height="45"/>
-                                <color key="backgroundColor" red="0.52156862749999999" green="0.086274509799999996" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="14"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKC-cq-Zmc" customClass="SKView">
+                                <rect key="frame" x="54" y="48.666666666666657" width="296" height="489.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAIN AREA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zk-Pi-OPw" customClass="SpacedFontLabel" customModule="DemoNight" customModuleProvider="target">
+                                        <rect key="frame" x="116.66666666666666" y="237.66666666666666" width="64.666666666666657" height="14"/>
+                                        <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                <real key="value" value="2.6699999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7Zk-Pi-OPw" firstAttribute="centerX" secondItem="oKC-cq-Zmc" secondAttribute="centerX" id="0Rc-7G-SV9"/>
+                                    <constraint firstItem="7Zk-Pi-OPw" firstAttribute="centerY" secondItem="oKC-cq-Zmc" secondAttribute="centerY" id="5M6-fG-ctD"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYn-0R-vZv" customClass="CustomizableButton" customModule="DemoNight" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="705" width="375" height="73"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="toggleLocationTracking:" destination="BV1-FR-VrT" eventType="touchUpInside" id="j5C-HO-i98"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-screen-top-label" translatesAutoresizingMaskIntoConstraints="NO" id="ZDM-dg-4j1">
-                                <rect key="frame" x="38" y="172" width="268" height="123"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALLOW ACCESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8za-Xo-3H7" customClass="SpacedFontLabel" customModule="DemoNight" customModuleProvider="target">
-                                <rect key="frame" x="77.5" y="364.5" width="145.5" height="17"/>
-                                <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARING LOCATION DATA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-Iv-esc" customClass="SpacedFontLabel" customModule="DemoNight" customModuleProvider="target">
+                                <rect key="frame" x="113.99999999999999" y="723.33333333333337" width="147.66666666666663" height="14"/>
+                                <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                                        <real key="value" value="3.1099999999999999"/>
+                                        <real key="value" value="2.6699999999999999"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* TAP TO TURN ON *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8N-jd-zqK">
+                                <rect key="frame" x="136.33333333333334" y="740" width="103.33333333333334" height="13"/>
+                                <fontDescription key="fontDescription" name="SFMono-Bold" family="SF Mono" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.090196078430000007" green="0.49019607840000001" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZDM-dg-4j1" firstAttribute="centerY" secondItem="9Yx-x9-hX8" secondAttribute="centerY" multiplier="0.68" id="0xc-nb-bZ5"/>
-                            <constraint firstItem="Zjs-7O-8h1" firstAttribute="centerX" secondItem="9Yx-x9-hX8" secondAttribute="centerX" multiplier="1.045" id="2Gj-vI-Iqr"/>
-                            <constraint firstItem="ZDM-dg-4j1" firstAttribute="centerX" secondItem="9Yx-x9-hX8" secondAttribute="centerX" multiplier="0.918" id="3ao-6o-WGZ"/>
-                            <constraint firstItem="Zjs-7O-8h1" firstAttribute="width" secondItem="h0g-bK-dz5" secondAttribute="width" multiplier="275/375" id="JJ0-Id-lJv"/>
-                            <constraint firstItem="ZDM-dg-4j1" firstAttribute="width" secondItem="h0g-bK-dz5" secondAttribute="width" multiplier="268/375" id="NEt-qS-m46"/>
-                            <constraint firstItem="ZDM-dg-4j1" firstAttribute="height" secondItem="h0g-bK-dz5" secondAttribute="height" multiplier="123/667" id="S93-Mj-99z"/>
-                            <constraint firstItem="8za-Xo-3H7" firstAttribute="centerY" secondItem="Zjs-7O-8h1" secondAttribute="centerY" id="gSd-5j-fZt"/>
-                            <constraint firstItem="Zjs-7O-8h1" firstAttribute="height" secondItem="h0g-bK-dz5" secondAttribute="height" multiplier="45/667" id="phn-Jg-9SZ"/>
-                            <constraint firstItem="Zjs-7O-8h1" firstAttribute="centerY" secondItem="9Yx-x9-hX8" secondAttribute="centerY" multiplier="1.088" id="suB-gn-rvC"/>
-                            <constraint firstItem="8za-Xo-3H7" firstAttribute="centerX" secondItem="Zjs-7O-8h1" secondAttribute="centerX" multiplier="0.7646" id="uRH-EZ-hxj"/>
+                            <constraint firstItem="mEC-ge-jrc" firstAttribute="centerY" secondItem="4qk-I5-YsI" secondAttribute="centerY" constant="-10" id="1Lf-GD-hN3"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="LYn-0R-vZv" secondAttribute="bottom" id="22f-Yt-jTR"/>
+                            <constraint firstItem="mEC-ge-jrc" firstAttribute="height" secondItem="3se-qz-xqx" secondAttribute="height" id="4ML-kq-oKU"/>
+                            <constraint firstItem="LYn-0R-vZv" firstAttribute="width" secondItem="3se-qz-xqx" secondAttribute="width" id="5oZ-XQ-Pb8"/>
+                            <constraint firstItem="f8N-jd-zqK" firstAttribute="centerX" secondItem="LYn-0R-vZv" secondAttribute="centerX" id="93C-vR-aKu"/>
+                            <constraint firstItem="oKC-cq-Zmc" firstAttribute="width" secondItem="3se-qz-xqx" secondAttribute="width" multiplier="296/375" id="FHB-8t-fyi"/>
+                            <constraint firstItem="Dbw-Iv-esc" firstAttribute="centerY" secondItem="LYn-0R-vZv" secondAttribute="centerY" multiplier="0.985" id="G3c-SW-0bV"/>
+                            <constraint firstItem="LYn-0R-vZv" firstAttribute="height" secondItem="3se-qz-xqx" secondAttribute="height" multiplier="60/667" id="Hq4-FR-Hbm"/>
+                            <constraint firstItem="oKC-cq-Zmc" firstAttribute="centerY" secondItem="4qk-I5-YsI" secondAttribute="centerY" multiplier="0.714" id="Lbg-64-eXC"/>
+                            <constraint firstItem="mEC-ge-jrc" firstAttribute="width" secondItem="3se-qz-xqx" secondAttribute="width" id="O2v-Ju-4oL"/>
+                            <constraint firstItem="f8N-jd-zqK" firstAttribute="top" secondItem="Dbw-Iv-esc" secondAttribute="bottom" constant="2.5" id="QOh-ni-FT8"/>
+                            <constraint firstItem="LYn-0R-vZv" firstAttribute="centerX" secondItem="4qk-I5-YsI" secondAttribute="centerX" id="SWX-pN-rkg"/>
+                            <constraint firstItem="mEC-ge-jrc" firstAttribute="centerX" secondItem="4qk-I5-YsI" secondAttribute="centerX" id="ctz-ON-5fr"/>
+                            <constraint firstItem="Dbw-Iv-esc" firstAttribute="centerX" secondItem="LYn-0R-vZv" secondAttribute="centerX" id="ihN-Lh-AA9"/>
+                            <constraint firstItem="oKC-cq-Zmc" firstAttribute="height" secondItem="3se-qz-xqx" secondAttribute="height" multiplier="402/667" id="rMa-4u-NWu"/>
+                            <constraint firstItem="oKC-cq-Zmc" firstAttribute="centerX" secondItem="4qk-I5-YsI" secondAttribute="centerX" multiplier="1.078" id="yqi-M2-q7I"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="9Yx-x9-hX8"/>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <connections>
+                        <outlet property="gameSceneView" destination="oKC-cq-Zmc" id="g1K-JX-QrG"/>
+                        <outlet property="toggleLocationTrackingButton" destination="LYn-0R-vZv" id="Cjb-6Z-9Os"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7AS-Iw-lxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249" y="34"/>
+            <point key="canvasLocation" x="88.405797101449281" y="29.347826086956523"/>
         </scene>
     </scenes>
     <resources>
-        <image name="main-screen-bottom-label" width="188" height="59"/>
-        <image name="main-screen-top-label" width="177" height="97"/>
+        <image name="main-screen-background" width="375" height="667"/>
     </resources>
 </document>

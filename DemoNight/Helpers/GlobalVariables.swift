@@ -7,11 +7,18 @@
 //
 
 import Foundation
+import CoreLocation
 
-/// All variables needed to setup the daaank iOS socket client
+/// Static instances shared throughtout the scope of the app.
+struct GlobalInstances {
+  /// Shared SocketClient instance.
+  static let socketClient = SocketClient()
+  /// Shared CLLocationManager instance.
+  static let locationManager = CLLocationManager()
+}
+
+/// All variables needed to setup the daaank iOS socket client.
 struct SocketVariables {
-  /// Global instance of the Daaank socket io client.
-  static let socket = SocketClient()
   /// Url for the Daaank server.
   static let url = "https://23760fec.ngrok.io/"
   /// Path to the server socket.
@@ -19,4 +26,3 @@ struct SocketVariables {
   /// Bool to show or hide debug log for socket client.
   static let debug = true
 }
-

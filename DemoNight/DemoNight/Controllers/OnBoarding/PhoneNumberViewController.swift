@@ -55,7 +55,7 @@ extension PhoneNumberViewController {
     user.phoneNumber = phoneNumber
     user.save()
 
-    socketClient.signupUser(phoneNumber: phoneNumber)
+    GlobalInstances.socketClient.signupUser(with: phoneNumber)
   }
 
   /// Set ViewController to GameViewController (main screen).
