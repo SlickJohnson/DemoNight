@@ -71,7 +71,7 @@ extension SocketClient {
     socket.on("user", callback: user)
     socket.on("verify-user", callback: verifyUser)
   }
-
+  
   /**
    Send an event to the server to create a new user.
 

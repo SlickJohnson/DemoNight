@@ -45,7 +45,7 @@ extension LocationSingleton: CLLocationManagerDelegate {
     guard let location = locations.last else { return }
 
     lastLocation = location
-    updateLocation(currentLocation: location)
+    update(currentLocation: location)
   }
 }
 
@@ -83,7 +83,7 @@ extension LocationSingleton {
    */
   func configureForLiveTracking() {
     guard let locationManager = locationManager else { return }
-
+    locationManager.delegate = self
     locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
     locationManager.allowsBackgroundLocationUpdates = true
     locationManager.pausesLocationUpdatesAutomatically = false
@@ -97,7 +97,7 @@ private extension LocationSingleton {
 
    - parameter currentLocation: Current CLLocation of user.
    */
-  func updateLocation(currentLocation: CLLocation) {
+  func update(currentLocation: CLLocation) {
     guard let delegate = self.delegate else { return }
 
     delegate.update(currentLocation)
